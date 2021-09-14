@@ -17,23 +17,17 @@ void type_promt(){
 }
 
 void read_input(char *par[]){
-  char input[1024];
-  fgets(input, 1024, stdin);
-  int size_of_par = 0;  
+  char *input; int t = 0, b = 0;
+  fgets(input, 10000, stdin);
 
-  char *token = strtok(input, " ");
-  par[size_of_par++] = strdup(token);
-  printf("%s lenght = %ld\n", token, strlen(token)); 
-  
+ char *token = strtok(input, " ");
 
-  while(token != NULL){
-    token = strtok(NULL, " ");
-    if(token != NULL){
-      par[size_of_par++] = strdup(token);
-    }
-  }
-  par[size_of_par] = NULL;
- 
+ while(token != NULL){
+   par[b++] = strdup(token);
+   token = strtok(NULL, " ");
+ }
+ par[b] = NULL;
+
 }
 
 
