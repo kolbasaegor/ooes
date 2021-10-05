@@ -10,6 +10,8 @@ void * my_realloc(void * ptr, size_t size)
     if (!ptr) {
         new = malloc(size);
         if (!new) { return NULL; }
+    } else if (size == 0) {
+      free(ptr);
     } else {
         if (malloc_usable_size(ptr) < size) {
             new = malloc(size);
