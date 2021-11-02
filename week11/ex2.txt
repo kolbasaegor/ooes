@@ -1,0 +1,4 @@
+bin
+file1
+file2
+lib64
