@@ -1,0 +1,20 @@
+***Deadlock Prevention***
+Deadlock prevention algorithms ensure that at least one of the necessary conditions
+(Mutual exclusion, hold and wait, no preemption and circular wait) does not hold true.
+However most prevention algorithms have poor resource utilization,
+and hence result in reduced throughputs.
+
+***Deadlock avoidance***
+If a system is already in a safe state, we can try to stay away from an unsafe state and
+avoid deadlock. Deadlocks cannot be avoided in an unsafe state. A system can be considered
+to be in safe state if it is not in a state of deadlock and can allocate resources upto
+the maximum available. A safe sequence of processes and allocation of resources ensures a safe state.
+Deadlock avoidance algorithms try not to allocate resources to a process if it will make the system
+in an unsafe state. Since resource allocation is not done right away in some cases,
+deadlock avoidance algorithms also suffer from low resource utilization problem.
+
+***Deadlock Recovery***
+Once a deadlock is detected, you will have to break the deadlock. It can be done through different ways,
+including, aborting one or more processes to break the circular wait condition causing the deadlock and
+preempting resources from one or more processes which are deadlocked.
+
